@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MachineVision.App.MainPage">
+			 
+    <ScrollView>
+        <VerticalStackLayout 
+            Spacing="5" 
+            Padding="5,0" 
+            VerticalOptions="StartAndExpand">
+            
+            <ScrollView HeightRequest="500">
+                <Image x:Name="Image1"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HorizontalOptions="Center" />
+            </ScrollView>
+           
+                
+            
+            <Label x:Name="TxtKeterangan"
+                Text="Machine Vision Test"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Machine Vision Test"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button 
+                x:Name="BtnOpenFile"
+                Text="Pilih Gambar"
+                SemanticProperties.Hint="Pilih Gambar"
+                Clicked="BtnOpenFile_Clicked"
+                HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" >
+                <Button 
+                x:Name="BtnCircle1"
+                Text="Circle Hough"
+                SemanticProperties.Hint="Circle Hough"
+                Clicked="CircleHoughClicked"
+                />
+                
+                <Button 
+                x:Name="BtnCircle2"
+                Text="Circle Contour"
+                SemanticProperties.Hint="Circle Contour"
+                Clicked="CircleContourClicked"
+                />
+            </StackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+ 
+</ContentPage>
